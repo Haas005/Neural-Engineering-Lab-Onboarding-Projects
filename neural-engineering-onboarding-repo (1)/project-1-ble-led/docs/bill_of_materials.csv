@@ -1,0 +1,10 @@
+Reference,Qty,Part,Value,Footprint,Notes
+U1,1,Seeed Studio XIAO ESP32-S3,,Seeed_Studio_XIAO_Series:XIAO-ESP32-S3-SMD,"C3 or C6 also work. Use XIAO-ESP32-S3-DIP if you solder headers. Antenna included."
+LED1,1,Red LED,,LED_THT:LED_D5.0mm,3 mm or 5 mm
+LED2,1,White LED,,LED_THT:LED_D5.0mm,3 mm or 5 mm
+LED3,1,Green LED,,LED_THT:LED_D5.0mm,3 mm or 5 mm
+R1-R3,3,Resistor,330 ohm,Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal,"1/4 W, one per LED"
+BZ1,1,KY-006 passive buzzer module,,Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical,"3 pins: - / unused / S. Must be passive, not active."
+-,1,Breadboard,,,
+-,1,Jumper wires,,,"About 10, male to male"
+-,1,USB-C data cable,,,Must carry data. Some cables only charge.
