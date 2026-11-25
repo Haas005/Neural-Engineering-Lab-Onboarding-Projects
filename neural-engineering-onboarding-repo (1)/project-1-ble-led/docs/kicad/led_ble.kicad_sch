@@ -1,0 +1,671 @@
+(kicad_sch (version 20250114) (generator "eeschema") (generator_version "9.0")
+ (uuid "ee8c964d-a6e5-48e4-926f-64847f3bdcaf")
+ (paper "A4")
+ (title_block (title "Project 1: ESP32 Bluetooth LED & Music Demo") (date "2026-11-24") (rev "3") (company "Neural Engineering Lab Onboarding Projects") (comment 1 "Seeed XIAO ESP32-S3 symbol and footprint from Seeed OPL_Kicad_Library"))
+ (lib_symbols
+
+(symbol "Onboarding:R_H" (pin_numbers hide) (pin_names (offset 0) hide) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "R" (at 0 2.54 0) (effects (font (size 1.27 1.27)))) (property "Value" "R" (at 0 -2.54 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+ (symbol "R_H_0_1" (rectangle (start -2.54 -1.016) (end 2.54 1.016) (stroke (width 0.254) (type default)) (fill (type none))))
+ (symbol "R_H_1_1"
+  (pin passive line (at -3.81 0 0) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+  (pin passive line (at 3.81 0 180) (length 1.27) (name "~" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+(symbol "Onboarding:LED_H" (pin_numbers hide) (pin_names (offset 0) hide) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "D" (at 0 2.54 0) (effects (font (size 1.27 1.27)))) (property "Value" "LED" (at 0 -2.54 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+ (symbol "LED_H_0_1"
+  (polyline (pts (xy -1.27 1.27) (xy -1.27 -1.27) (xy 1.27 0) (xy -1.27 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+  (polyline (pts (xy 1.27 1.27) (xy 1.27 -1.27)) (stroke (width 0.254) (type default)) (fill (type none))))
+ (symbol "LED_H_1_1"
+  (pin passive line (at -3.81 0 0) (length 2.54) (name "A" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+  (pin passive line (at 3.81 0 180) (length 2.54) (name "K" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))))
+(symbol "Onboarding:GND" (power) (pin_numbers hide) (pin_names (offset 0) hide) (exclude_from_sim no) (in_bom no) (on_board no)
+ (property "Reference" "#PWR" (at 0 -6.35 0) (effects (font (size 1.27 1.27)) hide)) (property "Value" "GND" (at 0 -3.81 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+ (symbol "GND_0_1" (polyline (pts (xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none))))
+ (symbol "GND_1_1" (pin power_in line (at 0 0 270) (length 0) hide (name "GND" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))))
+(symbol "Onboarding:PWR_FLAG" (power) (pin_numbers hide) (pin_names (offset 0) hide) (exclude_from_sim no) (in_bom no) (on_board no)
+ (property "Reference" "#FLG" (at 0 1.905 0) (effects (font (size 1.27 1.27)) hide)) (property "Value" "PWR_FLAG" (at 0 3.81 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+ (symbol "PWR_FLAG_0_0" (pin power_out line (at 0 0 90) (length 0) (name "pwr" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27))))))
+ (symbol "PWR_FLAG_0_1" (polyline (pts (xy 0 0) (xy 0 1.27) (xy -1.016 1.905) (xy 0 2.54) (xy 1.016 1.905) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))))
+(symbol "Onboarding:KY-006_Buzzer" (pin_names (offset 1.016)) (exclude_from_sim no) (in_bom yes) (on_board yes)
+ (property "Reference" "BZ" (at 0 5.08 0) (effects (font (size 1.27 1.27)))) (property "Value" "KY-006" (at 0 -8.89 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+ (symbol "KY-006_Buzzer_0_1" (rectangle (start -5.08 3.81) (end 5.08 -3.81) (stroke (width 0.254) (type default)) (fill (type background))))
+ (symbol "KY-006_Buzzer_1_1"
+  (pin passive line (at -7.62 0 0) (length 2.54) (name "-" (effects (font (size 1.27 1.27)))) (number "1" (effects (font (size 1.27 1.27)))))
+  (pin no_connect line (at 0 -6.35 90) (length 2.54) (name "NC" (effects (font (size 1.27 1.27)))) (number "2" (effects (font (size 1.27 1.27)))))
+  (pin passive line (at 7.62 0 180) (length 2.54) (name "S" (effects (font (size 1.27 1.27)))) (number "3" (effects (font (size 1.27 1.27)))))))
+
+	(symbol "Seeed_Studio_XIAO_Series:XIAO-ESP32-S3-SMD"
+		(pin_names
+			(offset 1.016)
+		)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(property "Reference" "U"
+			(at -18.288 14.478 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "XIAO-ESP32-S3-SMD"
+			(at -8.382 12.446 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Seeed_Studio_XIAO_Series:XIAO-ESP32-S3-SMD"
+			(at 4.318 -29.972 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at -8.89 5.08 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 0 0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(hide yes)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(symbol "XIAO-ESP32-S3-SMD_0_1"
+			(rectangle
+				(start -19.05 11.43)
+				(end 19.05 -27.94)
+				(stroke
+					(width 0)
+					(type default)
+				)
+				(fill
+					(type none)
+				)
+			)
+		)
+		(symbol "XIAO-ESP32-S3-SMD_1_0"
+			(pin passive line
+				(at -21.59 1.27 0)
+				(length 2.54)
+				(name "D0"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -2.54 0)
+				(length 2.54)
+				(name "D1"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -6.35 0)
+				(length 2.54)
+				(name "D2"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -10.16 0)
+				(length 2.54)
+				(name "D3"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -13.97 0)
+				(length 2.54)
+				(name "D4"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -17.78 0)
+				(length 2.54)
+				(name "D5"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -21.59 -21.59 0)
+				(length 2.54)
+				(name "D6"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -21.59 180)
+				(length 2.54)
+				(name "D7"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -17.78 180)
+				(length 2.54)
+				(name "D8"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -13.97 180)
+				(length 2.54)
+				(name "D9"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -10.16 180)
+				(length 2.54)
+				(name "D10"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "11"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -6.35 180)
+				(length 2.54)
+				(name "3V3_OUT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "12"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 -2.54 180)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "13"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 21.59 1.27 180)
+				(length 2.54)
+				(name "VBUS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "14"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(symbol "XIAO-ESP32-S3-SMD_1_1"
+			(pin passive line
+				(at -13.97 13.97 270)
+				(length 2.54)
+				(name "MTDI"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "15"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -10.16 13.97 270)
+				(length 2.54)
+				(name "MTDO"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "16"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -6.35 13.97 270)
+				(length 2.54)
+				(name "EN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "17"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 13.97 270)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "18"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 1.27 13.97 270)
+				(length 2.54)
+				(name "MTMS"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "19"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 13.97 270)
+				(length 2.54)
+				(name "MTCK"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "20"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 8.89 13.97 270)
+				(length 2.54)
+				(name "USB_DN"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "21"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 12.7 13.97 270)
+				(length 2.54)
+				(name "USB_DP"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "22"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at -2.54 -30.48 90)
+				(length 2.54)
+				(name "VBAT"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "23"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 1.27 -30.48 90)
+				(length 2.54)
+				(name "GND"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "24"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+			(pin passive line
+				(at 5.08 -30.48 90)
+				(length 2.54)
+				(name "PAD"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+				(number "25"
+					(effects
+						(font
+							(size 1.27 1.27)
+						)
+					)
+				)
+			)
+		)
+		(embedded_fonts no)
+	)
+ )
+(junction (at 99.06 99.06) (diameter 0) (color 0 0 0 0) (uuid "fe7a19cc-2b4f-4323-8937-45ce33b84b4d"))
+(junction (at 99.06 109.22) (diameter 0) (color 0 0 0 0) (uuid "72331874-7d43-4bbc-9cdb-58e2c07b44a6"))
+(junction (at 99.06 119.38) (diameter 0) (color 0 0 0 0) (uuid "2e005c09-0964-43f1-9044-bc84d98bc1f1"))
+(no_connect (at 148.59 100.33) (uuid "c1238ead-e0cf-45e2-9ee4-4a46076527c4"))
+(no_connect (at 148.59 107.95) (uuid "186b6221-eb62-4b9a-9c49-5a21c3350994"))
+(no_connect (at 148.59 123.19) (uuid "c1d963ca-e6d5-44a1-a208-f1d96532754d"))
+(no_connect (at 191.77 123.19) (uuid "53bd2b46-7b97-485b-8798-e88b6ab14253"))
+(no_connect (at 191.77 119.38) (uuid "a1277693-217b-4267-aae9-ac433b65ffd2"))
+(no_connect (at 191.77 115.57) (uuid "d273a3c2-96d1-48bd-992b-65cc0766c7ef"))
+(no_connect (at 191.77 111.76) (uuid "2277e72e-0bdb-4c3e-9577-dac7ef1038d6"))
+(no_connect (at 191.77 107.95) (uuid "a2161f9b-ffb5-4085-9643-0f700479428c"))
+(no_connect (at 191.77 100.33) (uuid "c281567a-c5c0-4993-bb56-0f6a8a337aa4"))
+(no_connect (at 156.21 87.63) (uuid "57ac7ba1-ffa0-4581-abd6-426a67c7b46c"))
+(no_connect (at 160.02 87.63) (uuid "8c8966d0-2469-4035-8a67-66cd581d5240"))
+(no_connect (at 163.83 87.63) (uuid "9185c364-3e4d-47a0-81f1-e2d02af21502"))
+(no_connect (at 167.64 87.63) (uuid "4566fa2e-8227-4c77-a808-39fe2475495c"))
+(no_connect (at 171.45 87.63) (uuid "eacee247-cb3d-4741-8c46-0cdce13f0d35"))
+(no_connect (at 175.26 87.63) (uuid "60922316-7843-42eb-91e3-53d94dfd8d56"))
+(no_connect (at 179.07 87.63) (uuid "0e701b67-987c-44e0-89c6-cc5f47eaed41"))
+(no_connect (at 182.88 87.63) (uuid "511bc34e-6a33-4d14-8819-a8462e9f8a96"))
+(no_connect (at 167.64 132.08) (uuid "85b7b269-37f9-41d4-8053-4784336a7bd2"))
+(no_connect (at 171.45 132.08) (uuid "21abe8dc-9f04-4f40-84fd-8add0f61de35"))
+(no_connect (at 175.26 132.08) (uuid "a38442dd-4225-435a-b37c-58d63c16c7a3"))
+(no_connect (at 111.76 90.17) (uuid "bcb81af8-2c7f-4357-83c0-749d3dc776f9"))
+(wire (pts (xy 148.59 104.14) (xy 142.24 104.14)) (stroke (width 0) (type default)) (uuid "a32651a9-cbcf-401c-b770-8d1f0ab70565"))
+(wire (pts (xy 142.24 104.14) (xy 142.24 83.82)) (stroke (width 0) (type default)) (uuid "59aa5887-3864-4412-92b9-c2ae4ffc36b9"))
+(wire (pts (xy 142.24 83.82) (xy 119.38000000000001 83.82)) (stroke (width 0) (type default)) (uuid "3eace137-d37e-4960-99b0-c86318545600"))
+(wire (pts (xy 104.14 83.82) (xy 99.06 83.82)) (stroke (width 0) (type default)) (uuid "8d0df681-c6f4-460c-a39c-b3fd61e229cf"))
+(wire (pts (xy 148.59 111.76) (xy 139.7 111.76)) (stroke (width 0) (type default)) (uuid "861de8ac-d796-4569-a89b-b6f103961b2f"))
+(wire (pts (xy 139.7 111.76) (xy 139.7 99.06)) (stroke (width 0) (type default)) (uuid "263b3041-eebb-4238-bf8a-a0801fdea296"))
+(wire (pts (xy 139.7 99.06) (xy 130.81 99.06)) (stroke (width 0) (type default)) (uuid "42f22656-6b5e-4d67-9b6a-f0095461975c"))
+(wire (pts (xy 123.19 99.06) (xy 115.57000000000001 99.06)) (stroke (width 0) (type default)) (uuid "a8567ddc-95e9-4c4d-bfb0-45a493c741e4"))
+(wire (pts (xy 107.95 99.06) (xy 99.06 99.06)) (stroke (width 0) (type default)) (uuid "9c6e9781-6468-4c41-9154-c7e6b2355db8"))
+(wire (pts (xy 148.59 115.57) (xy 137.16 115.57)) (stroke (width 0) (type default)) (uuid "ba723980-881d-4f46-a358-6d6f8a8263a3"))
+(wire (pts (xy 137.16 115.57) (xy 137.16 109.22)) (stroke (width 0) (type default)) (uuid "7377e04b-a452-49f9-874e-928c4a46b8a2"))
+(wire (pts (xy 137.16 109.22) (xy 130.81 109.22)) (stroke (width 0) (type default)) (uuid "be4e179e-ffc8-4d06-bbe1-7029b42c4469"))
+(wire (pts (xy 123.19 109.22) (xy 115.57000000000001 109.22)) (stroke (width 0) (type default)) (uuid "52049313-87d9-4b66-9c17-c0f6815d2296"))
+(wire (pts (xy 107.95 109.22) (xy 99.06 109.22)) (stroke (width 0) (type default)) (uuid "35a105d4-2a6f-4c08-aea9-ddbc03168beb"))
+(wire (pts (xy 148.59 119.38) (xy 134.62 119.38)) (stroke (width 0) (type default)) (uuid "4c837060-23de-4d43-bbf2-fcdfa0e30c6f"))
+(wire (pts (xy 134.62 119.38) (xy 130.81 119.38)) (stroke (width 0) (type default)) (uuid "be3bb20a-acde-4167-a28e-b30b5831b382"))
+(wire (pts (xy 123.19 119.38) (xy 115.57000000000001 119.38)) (stroke (width 0) (type default)) (uuid "8b4f7919-1b07-4c81-b332-b7d056560f1c"))
+(wire (pts (xy 107.95 119.38) (xy 99.06 119.38)) (stroke (width 0) (type default)) (uuid "3d9556b1-56a6-4bc1-849d-ed8adfc38d20"))
+(wire (pts (xy 99.06 83.82) (xy 99.06 99.06)) (stroke (width 0) (type default)) (uuid "95596d24-cda3-4137-bf88-26e4e8aadad6"))
+(wire (pts (xy 99.06 99.06) (xy 99.06 109.22)) (stroke (width 0) (type default)) (uuid "2fc4b0ec-2cdd-4241-89ab-ab0383b6809e"))
+(wire (pts (xy 99.06 109.22) (xy 99.06 119.38)) (stroke (width 0) (type default)) (uuid "cb34d530-93ce-405c-8779-7a824c3cd407"))
+(wire (pts (xy 99.06 119.38) (xy 99.06 124.46)) (stroke (width 0) (type default)) (uuid "e42229b7-2c6a-41d9-9678-78f2ce31ecb4"))
+(wire (pts (xy 191.77 104.14) (xy 194.31 104.14)) (stroke (width 0) (type default)) (uuid "cf5760c2-8a91-4004-8b08-cbc13300dacc"))
+(symbol (lib_id "Seeed_Studio_XIAO_Series:XIAO-ESP32-S3-SMD") (at 170.18 101.6 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "6d236849-cfbd-4079-8065-c48483f7462e")
+ (property "Reference" "U1" (at 170.18 85.6 0) (effects (font (size 1.27 1.27)))) (property "Value" "XIAO-ESP32-S3-SMD" (at 170.18 135.6 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Seeed_Studio_XIAO_Series:XIAO-ESP32-S3-SMD" (at 170.18 101.6 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 170.18 101.6 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "1c7c8c5c-fa9a-4f7e-810d-ce52fc92e9db"))(pin "2" (uuid "0f70da1e-6565-431d-bf30-7d97bbfadcf6"))(pin "3" (uuid "9497d9ab-04cd-45b9-83e9-197f201dc10b"))(pin "4" (uuid "ca850a08-9a11-42c6-a127-931b43215997"))(pin "5" (uuid "f0b81880-630f-4f3f-8906-9e498ea55a06"))(pin "6" (uuid "9ce42df9-9207-47a5-a6ac-83e75927d28c"))(pin "7" (uuid "5adc8519-5e84-40fc-88c6-56f4cbae0b4c"))(pin "8" (uuid "cda303dd-5da9-4ee8-a3cc-1a91d7ebc8db"))(pin "9" (uuid "d5501a3b-d2a4-44b8-807e-bd08228c44df"))(pin "10" (uuid "9d4e4b12-654d-4b36-97cc-3a75cf17fba0"))(pin "11" (uuid "a390beb6-9f34-4da1-9533-bcfa379979dd"))(pin "12" (uuid "a89185b3-4146-401a-982f-ac89e326c95c"))(pin "13" (uuid "3a435a0d-8028-4357-8c3d-d04de624fc72"))(pin "14" (uuid "9e19a09d-9bcf-49de-b322-e364d42ba08f"))(pin "15" (uuid "899d9e31-c636-40ab-87dc-74af83634a77"))(pin "16" (uuid "6db11028-75af-4e01-9755-f3ab764bfffb"))(pin "17" (uuid "5f990071-86e1-498c-9196-420be217299a"))(pin "18" (uuid "85b77c1a-a8ef-4b27-9bec-45f76eda9dc2"))(pin "19" (uuid "7f62c3d5-f5a5-4d0b-92dc-f4af95f870fa"))(pin "20" (uuid "2d965674-f89e-4799-9a4a-a493d729186c"))(pin "21" (uuid "a7f08285-968b-4704-9094-4644ec8cf91f"))(pin "22" (uuid "3c4acbfd-db6a-4508-ad4f-a26f197075a2"))(pin "23" (uuid "8f7e4538-c4ff-41f5-bde2-f0c7238c42fd"))(pin "24" (uuid "cceee13b-53b4-49a0-88a7-b237d5f558e9"))(pin "25" (uuid "f0827812-456f-400a-8de8-37c5e0b9af07"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "U1") (unit 1)))))
+(symbol (lib_id "Onboarding:KY-006_Buzzer") (at 111.76 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "fba3dbe2-9994-4ece-8ed9-e7285fd359ed")
+ (property "Reference" "BZ1" (at 111.76 75.32 0) (effects (font (size 1.27 1.27)))) (property "Value" "KY-006 passive buzzer" (at 111.76 77.61999999999999 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" (at 111.76 83.82 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 111.76 83.82 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "5ca7a7fb-3dc6-4867-9fc0-f114db672082"))(pin "2" (uuid "c582fb4c-8fba-44b0-8c7f-3ca35b8d7980"))(pin "3" (uuid "bf80549e-3a57-4f2c-90e2-6b30d0779b8e"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "BZ1") (unit 1)))))
+(symbol (lib_id "Onboarding:R_H") (at 127.0 99.06 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "1fc40a26-9a21-4f44-b88f-1a5541ff03d1")
+ (property "Reference" "R1" (at 127.0 96.06 0) (effects (font (size 1.27 1.27)))) (property "Value" "330" (at 127.0 102.56 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 127.0 99.06 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 127.0 99.06 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "bb4fc66f-d1ad-451e-bffa-3cf87b6b6b89"))(pin "2" (uuid "0f47f9a7-b2a4-4994-a38d-5537f76fd29d"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "R1") (unit 1)))))
+(symbol (lib_id "Onboarding:LED_H") (at 111.76 99.06 0) (mirror y) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "8cbdf9a0-0785-4cd8-b331-56ecde01faaf")
+ (property "Reference" "LED1" (at 111.76 96.06 0) (effects (font (size 1.27 1.27)))) (property "Value" "LED_RED" (at 111.76 102.56 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "LED_THT:LED_D5.0mm" (at 111.76 99.06 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 111.76 99.06 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "83dc25df-a30e-4952-af86-c33fbb0b4444"))(pin "2" (uuid "8c07bf9c-020b-4830-ba77-4978510ad2fc"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "LED1") (unit 1)))))
+(symbol (lib_id "Onboarding:R_H") (at 127.0 109.22 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "f6301635-a3f2-473f-9173-57c950729e14")
+ (property "Reference" "R2" (at 127.0 106.22 0) (effects (font (size 1.27 1.27)))) (property "Value" "330" (at 127.0 112.72 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 127.0 109.22 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 127.0 109.22 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "19b54442-3bc0-4d72-82b5-0edae101293a"))(pin "2" (uuid "35fef1a5-c786-4c75-92cf-2803d351d1da"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "R2") (unit 1)))))
+(symbol (lib_id "Onboarding:LED_H") (at 111.76 109.22 0) (mirror y) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "bc9368d5-cf15-4a9f-9f5b-176246bba435")
+ (property "Reference" "LED2" (at 111.76 106.22 0) (effects (font (size 1.27 1.27)))) (property "Value" "LED_WHITE" (at 111.76 112.72 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "LED_THT:LED_D5.0mm" (at 111.76 109.22 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 111.76 109.22 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "18bf094a-e557-4bcb-91dd-88f7077f08df"))(pin "2" (uuid "cae75b84-3fcc-449b-a3fa-5e203bdeb2b7"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "LED2") (unit 1)))))
+(symbol (lib_id "Onboarding:R_H") (at 127.0 119.38 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "daef3cba-2e12-477d-bcbb-8d3690aeca03")
+ (property "Reference" "R3" (at 127.0 116.38 0) (effects (font (size 1.27 1.27)))) (property "Value" "330" (at 127.0 122.88 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" (at 127.0 119.38 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 127.0 119.38 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "9fa0ab2c-3fa5-4747-a9d4-3f6258eaaac8"))(pin "2" (uuid "9b332b02-e283-4ba4-908c-fdea14a20115"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "R3") (unit 1)))))
+(symbol (lib_id "Onboarding:LED_H") (at 111.76 119.38 0) (mirror y) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d6621769-3bd3-4167-86c0-8e3873bf315a")
+ (property "Reference" "LED3" (at 111.76 116.38 0) (effects (font (size 1.27 1.27)))) (property "Value" "LED_GREEN" (at 111.76 122.88 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "LED_THT:LED_D5.0mm" (at 111.76 119.38 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 111.76 119.38 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "085f2da5-d376-4eb8-a982-5c18c61caac2"))(pin "2" (uuid "2d63e67d-14b7-434a-9cf6-74a5eb16d229"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "LED3") (unit 1)))))
+(symbol (lib_id "Onboarding:GND") (at 99.06 124.46 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "366f686a-7edd-4ba5-b0b1-e7d37bfcc2f6")
+ (property "Reference" "#PWR01" (at 99.06 121.46 0) (effects (font (size 1.27 1.27)) hide)) (property "Value" "GND" (at 99.06 128.27 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 99.06 124.46 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 99.06 124.46 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "2afa4803-8708-476a-8d4d-7c4106961e4c"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "#PWR01") (unit 1)))))
+(symbol (lib_id "Onboarding:PWR_FLAG") (at 99.06 83.82 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d8b7ba15-91b3-4750-b4b4-242cf72094d3")
+ (property "Reference" "#FLG01" (at 99.06 83.82 0) (effects (font (size 1.27 1.27)) hide)) (property "Value" "PWR_FLAG" (at 96.06 80.00999999999999 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 99.06 83.82 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 99.06 83.82 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "e6f22e1d-eda6-40e0-8640-bd1f7dfb9efb"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "#FLG01") (unit 1)))))
+(symbol (lib_id "Onboarding:GND") (at 194.31 104.14 0) (unit 1) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (uuid "d610557c-8ced-4b28-834b-6dae0b5b5c7d")
+ (property "Reference" "#PWR02" (at 194.31 101.14 0) (effects (font (size 1.27 1.27)) hide)) (property "Value" "GND" (at 194.31 107.95 0) (effects (font (size 1.27 1.27)))) (property "Footprint" "" (at 194.31 104.14 0) (effects (font (size 1.27 1.27)) hide)) (property "Datasheet" "~" (at 194.31 104.14 0) (effects (font (size 1.27 1.27)) hide))
+ (pin "1" (uuid "992f832a-de7c-4429-b85a-4bd8f41cb7d8"))
+ (instances (project "led_ble" (path "/ee8c964d-a6e5-48e4-926f-64847f3bdcaf" (reference "#PWR02") (unit 1)))))
+(text "Pin labels" (exclude_from_sim no) (at 99.06 141 0) (effects (font (size 1.27 1.27) bold) (justify left)) (uuid "704928cd-0397-474b-ab70-b73a694a9a08"))
+(text "D1 (pin 2)  buzzer module S pin" (exclude_from_sim no) (at 99.06 145.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "ca33e05b-96d1-4ed4-8f5f-b6951931cab9"))
+(text "D3 (pin 4)  red LED" (exclude_from_sim no) (at 99.06 148.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8ebba2e1-7814-4e26-a2d5-834ffefd4112"))
+(text "D4 (pin 5)  white LED" (exclude_from_sim no) (at 99.06 152.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "2b8029a2-1a5d-41cc-a4f9-d5321fec5965"))
+(text "D5 (pin 6)  green LED" (exclude_from_sim no) (at 99.06 155.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "182ecf6a-0209-429c-82a3-bd0397d90a90"))
+(text "GND (pin 13)  common return" (exclude_from_sim no) (at 99.06 159.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "8abb9110-41b7-4a76-85a6-0b3408bbc9b7"))
+(text "Notes" (exclude_from_sim no) (at 99.06 165 0) (effects (font (size 1.27 1.27) bold) (justify left)) (uuid "1351dfb9-043f-4eb9-817a-6031305d7114"))
+(text "LED long leg (anode) faces the resistor, short leg goes to GND." (exclude_from_sim no) (at 99.06 169.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "79c29f3a-d200-4086-b88c-3f80a278456e"))
+(text "KY-006 buzzer module: S to D1, - to GND, middle pin not connected. No resistor needed." (exclude_from_sim no) (at 99.06 172.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "9982d5ba-1cfe-4f79-ab87-1817367038bc"))
+(text "Unused XIAO pins are marked no-connect. Swap the footprint to XIAO-ESP32-S3-DIP" (exclude_from_sim no) (at 99.06 176.0 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "c62e4935-517e-4f10-842d-358b8123afb6"))
+(text "if you solder headers to the module." (exclude_from_sim no) (at 99.06 179.5 0) (effects (font (size 1.27 1.27)) (justify left)) (uuid "fc07b711-f443-42a0-8dd2-6f3a21c26744"))
+ (sheet_instances (path "/" (page "1")))
+)
