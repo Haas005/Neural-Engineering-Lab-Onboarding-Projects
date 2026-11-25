@@ -205,4 +205,4 @@ Tested on a XIAO ESP32-S3 with Chrome. That covered connecting, the LED toggles,
 
 ## Contact
 
-Robert Haas (student mentor) and Dr. Nathalia Peixoto (lab PI), George Mason University.
+Robert Haas, George Mason University.
