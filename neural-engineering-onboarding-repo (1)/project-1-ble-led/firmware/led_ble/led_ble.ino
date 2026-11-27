@@ -51,9 +51,6 @@ static const uint8_t LED_PINS[3] = {D3, D4, D5};
 // Change this if your speaker is wired to a different pin.
 #define SPEAKER_PIN D1
 
-// Length of one eighth note in milliseconds. Most of the song is eighth
-// notes, so 180 ms gives a lively tempo. Raise it to slow the song down,
-// lower it to speed it up.
 static const uint32_t EIGHTH_MS = 300;
 
 enum Pattern : uint8_t {
